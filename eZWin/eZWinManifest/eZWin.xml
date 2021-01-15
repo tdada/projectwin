@@ -10,7 +10,7 @@
   <!-- Begin Basic Settings: Add-in metadata, used for all versions of Office unless override provided. -->
 
   <!-- IMPORTANT! Id must be unique for your add-in, if you reuse this manifest ensure that you change this id to a new GUID. -->
-  <Id>c2d2ce9b-513b-4cc4-bf95-d808130593a6</Id>
+  <Id>c2d2ce9b-513b-4cc4-bf95-d808150593a6</Id>
 
   <!--Version. Updates from the store only get triggered if there is a version change. -->
   <Version>1.0.0.0</Version>
@@ -67,15 +67,15 @@
           <!-- Function file is a HTML page that includes the JavaScript where functions for ExecuteAction will be called. 
             Think of the FunctionFile as the code behind ExecuteFunction. -->
           <FunctionFile resid="Contoso.DesktopFunctionFile.Url" />
-
+        
           <!-- PrimaryCommandSurface is the main Office Ribbon. -->
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <!-- Use OfficeTab to extend an existing Tab. Use CustomTab to create a new tab. -->
-            <OfficeTab id="TabHome">
+            <CustomTab id="TabSignEx">
               <!-- Ensure you provide a unique id for the group. Recommendation for any IDs is to namespace using your company name. -->
-              <Group id="Contoso.Group1">
+              <Group id="SignEz.MainGroup">
                 <!-- Label for your group. resid must point to a ShortString resource. -->
-                <Label resid="Contoso.Group1Label" />
+                <Label resid="SignEz.MainGroupLabel" />
                 <!-- Icons. Required sizes 16,32,80, optional 20, 24, 40, 48, 64. Strongly recommended to provide all sizes for great UX. -->
                 <!-- Use PNG icons. All URLs on the resources section must use HTTPS. -->
                 <Icon>
@@ -84,14 +84,12 @@
                   <bt:Image size="80" resid="Contoso.tpicon_80x80" />
                 </Icon>
 
-                <!-- Control. It can be of type "Button" or "Menu". -->
-                <Control xsi:type="Button" id="Contoso.TaskpaneButton">
-                  <Label resid="Contoso.TaskpaneButton.Label" />
+                <!-- Plain Text -->
+                <Control xsi:type="Button" id="SignEz.TypesPlainTextButton">
+                  <Label resid="SignEz.TypesPlainText" />
                   <Supertip>
-                    <!-- ToolTip title. resid must point to a ShortString resource. -->
-                    <Title resid="Contoso.TaskpaneButton.Label" />
-                    <!-- ToolTip description. resid must point to a LongString resource. -->
-                    <Description resid="Contoso.TaskpaneButton.Tooltip" />
+                    <Title resid="SignEz.TypesPlainText" />
+                    <Description resid="SignEz.TypesPlainTextST" />
                   </Supertip>
                   <Icon>
                     <bt:Image size="16" resid="Contoso.tpicon_16x16" />
@@ -99,15 +97,76 @@
                     <bt:Image size="80" resid="Contoso.tpicon_80x80" />
                   </Icon>
 
-                  <!-- This is what happens when the command is triggered (E.g. click on the Ribbon). Supported actions are ExecuteFunction or ShowTaskpane. -->
                   <Action xsi:type="ShowTaskpane">
                     <TaskpaneId>ButtonId1</TaskpaneId>
                     <!-- Provide a URL resource id for the location that will be displayed on the task pane. -->
                     <SourceLocation resid="Contoso.Taskpane.Url" />
                   </Action>
                 </Control>
+
+                <!-- Date -->
+                <Control xsi:type="Button" id="SignEz.TypesDateButton">
+                  <Label resid="SignEz.TypesDate" />
+                  <Supertip>
+                    <Title resid="SignEz.TypesDate" />
+                    <Description resid="SignEz.TypesDateST" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Contoso.tpicon_16x16" />
+                    <bt:Image size="32" resid="Contoso.tpicon_32x32" />
+                    <bt:Image size="80" resid="Contoso.tpicon_80x80" />
+                  </Icon>
+
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <!-- Provide a URL resource id for the location that will be displayed on the task pane. -->
+                    <SourceLocation resid="Contoso.Taskpane.Url" />
+                  </Action>
+                </Control>
+
+                <!-- Signature -->
+                <Control xsi:type="Button" id="SignEz.TypesSignatureButton">
+                  <Label resid="SignEz.TypesSignature" />
+                  <Supertip>
+                    <Title resid="SignEz.TypesSignature" />
+                    <Description resid="SignEz.TypesSignatureST" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Contoso.tpicon_16x16" />
+                    <bt:Image size="32" resid="Contoso.tpicon_32x32" />
+                    <bt:Image size="80" resid="Contoso.tpicon_80x80" />
+                  </Icon>
+
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <!-- Provide a URL resource id for the location that will be displayed on the task pane. -->
+                    <SourceLocation resid="Contoso.Taskpane.Url" />
+                  </Action>
+                </Control>
+
+                <!-- Address -->
+                <Control xsi:type="Button" id="SignEz.TypesAddressButton">
+                  <Label resid="SignEz.TypesAddress" />
+                  <Supertip>
+                    <Title resid="SignEz.TypesAddress" />
+                    <Description resid="SignEz.TypesAddressST" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Contoso.tpicon_16x16" />
+                    <bt:Image size="32" resid="Contoso.tpicon_32x32" />
+                    <bt:Image size="80" resid="Contoso.tpicon_80x80" />
+                  </Icon>
+
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <!-- Provide a URL resource id for the location that will be displayed on the task pane. -->
+                    <SourceLocation resid="Contoso.Taskpane.Url" />
+                  </Action>
+                </Control>
+
               </Group>
-            </OfficeTab>
+              <Label resid="SignEz.RibbonLabel"/>
+            </CustomTab>
           </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
@@ -127,14 +186,19 @@
       </bt:Urls>
       <!-- ShortStrings max characters==125. -->
       <bt:ShortStrings>
-        <bt:String id="Contoso.TaskpaneButton.Label" DefaultValue="Show Taskpane" />
-        <bt:String id="Contoso.Group1Label" DefaultValue="Commands Group" />
-        <bt:String id="Contoso.GetStarted.Title" DefaultValue="Get started with your sample add-in!" />
+        <bt:String id="SignEz.RibbonLabel" DefaultValue="SignEz" />
+        <bt:String id="SignEz.MainGroupLabel" DefaultValue="Types" />
+        <bt:String id="SignEz.TypesPlainText" DefaultValue="Plain Text" />
+        <bt:String id="SignEz.TypesDate" DefaultValue="Date" />
+        <bt:String id="SignEz.TypesSignature" DefaultValue="Signature" />
+        <bt:String id="SignEz.TypesAddress" DefaultValue="Address" />
       </bt:ShortStrings>
       <!-- LongStrings max characters==250. -->
       <bt:LongStrings>
-        <bt:String id="Contoso.TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane" />
-        <bt:String id="Contoso.GetStarted.Description" DefaultValue="Your sample add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started." />
+        <bt:String id="SignEz.TypesPlainTextST" DefaultValue="Insert a plain text field into your document" />
+        <bt:String id="SignEz.TypesDateST" DefaultValue="Insert a date field into your document" />
+        <bt:String id="SignEz.TypesSignatureST" DefaultValue="Insert a signature block into your document" />
+        <bt:String id="SignEz.TypesAddressST" DefaultValue="Insert an address block into your document" />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

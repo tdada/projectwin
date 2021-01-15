@@ -1,2 +1,2 @@
 bin\Debug\OfficeAppManifests\eZWinManifest.xml
-C:\Users\Rakeki\source\repos\eZWin\eZWin\bin\Debug\eZWin.debugapp
+D:\Source\Repos\projectwin\eZWin\bin\Debug\eZWin.debugapp
