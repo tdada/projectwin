@@ -1,0 +1,2 @@
+C:\Users\Rakeki\source\repos\eZWin\eZWin\obj\Debug\eZWin.csprojAssemblyReference.cache
+C:\Users\Rakeki\source\repos\eZWin\eZWin\obj\Debug\eZWin.csproj.CoreCompileInputs.cache
