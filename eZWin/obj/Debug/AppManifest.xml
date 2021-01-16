@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="eZWin"
-     ProductID="{b7a2d406-2029-43b6-a299-4b9ccffb8d8e}"
+     ProductID="{15e18576-6a10-4ca5-8e3f-a2d3da154bf0}"
      Version="1.0.0.0"
      SharePointMinVersion="15.0.0.0"
 >

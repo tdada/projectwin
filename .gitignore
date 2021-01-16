@@ -1,3 +1,6 @@
 # exclude build directories
-bin
+**/bin
 .vs
+**/Release
+**/Debug
+**/obj
