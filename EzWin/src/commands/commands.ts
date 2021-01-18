@@ -28,6 +28,23 @@ function action(event: Office.AddinCommands.Event) {
   event.completed();
 }
 
+async function test(event: Office.AddinCommands.Event) {
+  Word.run(async context => {
+    /**
+     * Insert your Word code here
+     */
+
+    // insert a paragraph at the end of the document.
+    const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.end);
+
+    // change the paragraph color to blue.
+    paragraph.font.color = "blue";
+
+    await context.sync();
+  });
+  event.completed();
+}
+
 function getGlobal() {
   return typeof self !== "undefined"
     ? self
@@ -42,3 +59,4 @@ const g = getGlobal() as any;
 
 // the add-in command functions need to be available in global scope
 g.action = action;
+g.test = test;

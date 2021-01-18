@@ -56,10 +56,8 @@
                     <bt:Image size="32" resid="SignEz.TypePlainText_32x32" />
                     <bt:Image size="80" resid="SignEz.TypePlainText_80x80" />
                   </Icon>
-
-                  <Action xsi:type="ShowTaskpane">
-                    <TaskpaneId>ButtonId1</TaskpaneId>
-                    <SourceLocation resid="Taskpane.Url" />
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>test</FunctionName>
                   </Action>
                 </Control>
 
