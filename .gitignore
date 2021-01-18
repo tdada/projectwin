@@ -1,6 +1,2 @@
-# exclude build directories
-**/bin
-.vs
-**/Release
-**/Debug
-**/obj
+**/node_modules/
+**/.vscode

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>8c093e31-99ba-44a6-ad9b-4e22bf64a322</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Contoso</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="EzWin"/>
+  <Description DefaultValue="A template to get started."/>
+  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <AppDomains>
+    <AppDomain>https://www.contoso.com</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Document"/>
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Document">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="GetStarted.Title"/>
+            <Description resid="GetStarted.Description"/>
+            <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
+          </GetStarted>
+          <FunctionFile resid="Commands.Url"/>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <!-- Use OfficeTab to extend an existing Tab. Use CustomTab to create a new tab. -->
+            <CustomTab id="TabSignEx">
+              <!-- Ensure you provide a unique id for the group. Recommendation for any IDs is to namespace using your company name. -->
+              <Group id="SignEz.MainGroup">
+                <!-- Label for your group. resid must point to a ShortString resource. -->
+                <Label resid="SignEz.MainGroupLabel" />
+                <!-- Icons. Required sizes 16,32,80, optional 20, 24, 40, 48, 64. Strongly recommended to provide all sizes for great UX. -->
+                <!-- Use PNG icons. All URLs on the resources section must use HTTPS. -->
+                  <Icon>
+                    <bt:Image size="16" resid="SignEz.TypePlainText_16x16" />
+                    <bt:Image size="32" resid="SignEz.TypePlainText_32x32" />
+                    <bt:Image size="80" resid="SignEz.TypePlainText_80x80" />
+                  </Icon>
+
+                <!-- Plain Text -->
+                <Control xsi:type="Button" id="SignEz.TypesPlainTextButton">
+                  <Label resid="SignEz.TypesPlainText" />
+                  <Supertip>
+                    <Title resid="SignEz.TypesPlainText" />
+                    <Description resid="SignEz.TypesPlainTextST" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="SignEz.TypePlainText_16x16" />
+                    <bt:Image size="32" resid="SignEz.TypePlainText_32x32" />
+                    <bt:Image size="80" resid="SignEz.TypePlainText_80x80" />
+                  </Icon>
+
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url" />
+                  </Action>
+                </Control>
+
+                <!-- Date -->
+                <Control xsi:type="Button" id="SignEz.TypesDateButton">
+                  <Label resid="SignEz.TypesDate" />
+                  <Supertip>
+                    <Title resid="SignEz.TypesDate" />
+                    <Description resid="SignEz.TypesDateST" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="SignEz.TypePlainText_16x16" />
+                    <bt:Image size="32" resid="SignEz.TypePlainText_32x32" />
+                    <bt:Image size="80" resid="SignEz.TypePlainText_80x80" />
+                  </Icon>
+
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url" />
+                  </Action>
+                </Control>
+
+                <!-- Signature -->
+                <Control xsi:type="Button" id="SignEz.TypesSignatureButton">
+                  <Label resid="SignEz.TypesSignature" />
+                  <Supertip>
+                    <Title resid="SignEz.TypesSignature" />
+                    <Description resid="SignEz.TypesSignatureST" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="SignEz.TypePlainText_16x16" />
+                    <bt:Image size="32" resid="SignEz.TypePlainText_32x32" />
+                    <bt:Image size="80" resid="SignEz.TypePlainText_80x80" />
+                  </Icon>
+
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url" />
+                  </Action>
+                </Control>
+
+                <!-- Address -->
+                <Control xsi:type="Button" id="SignEz.TypesAddressButton">
+                  <Label resid="SignEz.TypesAddress" />
+                  <Supertip>
+                    <Title resid="SignEz.TypesAddress" />
+                    <Description resid="SignEz.TypesAddressST" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="SignEz.TypePlainText_16x16" />
+                    <bt:Image size="32" resid="SignEz.TypePlainText_32x32" />
+                    <bt:Image size="80" resid="SignEz.TypePlainText_80x80" />
+                  </Icon>
+
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url" />
+                  </Action>
+                </Control>
+
+              </Group>
+              <Label resid="SignEz.RibbonLabel"/>
+            </CustomTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="SignEz.TypePlainText_16x16" DefaultValue="https://localhost:3000/assets/text_16x16.png" />
+        <bt:Image id="SignEz.TypePlainText_32x32" DefaultValue="https://localhost:3000/assets/text_32x32.png" />
+        <bt:Image id="SignEz.TypePlainText_80x80" DefaultValue="https://localhost:3000/assets/text_80x80.png" />
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+      </bt:Urls>
+      <!-- ShortStrings max characters==125. -->
+      <bt:ShortStrings>
+        <bt:String id="SignEz.RibbonLabel" DefaultValue="SignEz" />
+        <bt:String id="SignEz.MainGroupLabel" DefaultValue="Types" />
+        <bt:String id="SignEz.TypesPlainText" DefaultValue="Plain Text" />
+        <bt:String id="SignEz.TypesDate" DefaultValue="Date" />
+        <bt:String id="SignEz.TypesSignature" DefaultValue="Signature" />
+        <bt:String id="SignEz.TypesAddress" DefaultValue="Address" />
+      </bt:ShortStrings>
+      <!-- LongStrings max characters==250. -->
+      <bt:LongStrings>
+        <bt:String id="SignEz.TypesPlainTextST" DefaultValue="Insert a plain text field into your document" />
+        <bt:String id="SignEz.TypesDateST" DefaultValue="Insert a date field into your document" />
+        <bt:String id="SignEz.TypesSignatureST" DefaultValue="Insert a signature block into your document" />
+        <bt:String id="SignEz.TypesAddressST" DefaultValue="Insert an address block into your document" />
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>

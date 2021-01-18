@@ -1,2 +1,0 @@
-bin\Debug\OfficeAppManifests\eZWinManifest.xml
-D:\Source\Repos\projectwin\eZWin\bin\Debug\eZWin.debugapp
